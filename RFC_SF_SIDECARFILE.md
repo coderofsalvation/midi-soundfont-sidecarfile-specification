@@ -74,6 +74,8 @@ $ mediaplayer song1.mid
 - If no sidecar file is found, the media player SHOULD fall back to its default soundfont or configured soundfont settings.
 - symlinked (or windows junctioned) soundfonts should be allowed (to preserve space)
 
+> In case of online players: `HTTP HEAD` requests can be used to check for soundfont-sidecar-files.
+
 4. **Implementation Notes:**
 
 - This spec is designed to be lightweight and easy to implement, encouraging broad adoption across various media players and platforms.

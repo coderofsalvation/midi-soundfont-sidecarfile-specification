@@ -132,6 +132,9 @@ Internet-Draft           soundfont sidecarfiles                June 2025
    *  symlinked (or windows junctioned) soundfonts should be allowed (to
       preserve space)
 
+   |  In case of online players: HTTP HEAD requests can be used to check
+   |  for soundfont-sidecar-files.
+
    4.  *Implementation Notes:*
 
    *  This spec is designed to be lightweight and easy to implement,
@@ -159,9 +162,6 @@ Internet-Draft           soundfont sidecarfiles                June 2025
    *  A list of adopting media players and software will be maintained
       to track the spec's ecosystem impact.
 
-   *Revision History:*
-
-   *  *v0.5:* Initial release.
 
 
 
@@ -169,6 +169,10 @@ van Kammen              Expires 22 December 2025                [Page 3]
 
 Internet-Draft           soundfont sidecarfiles                June 2025
 
+
+   *Revision History:*
+
+   *  *v0.5:* Initial release.
 
    *Next Steps:*
 
@@ -191,10 +195,6 @@ Internet-Draft           soundfont sidecarfiles                June 2025
 3.  Acknowledgments
 
    TODO acknowledge.
-
-
-
-
 
 
 

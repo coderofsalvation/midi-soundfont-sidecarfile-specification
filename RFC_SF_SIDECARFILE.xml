@@ -78,7 +78,8 @@ $ mediaplayer song1.mid
 <li>If no sidecar file is found, the media player SHOULD fall back to its default soundfont or configured soundfont settings.</li>
 <li>symlinked (or windows junctioned) soundfonts should be allowed (to preserve space)</li>
 </ul>
-
+<blockquote><t>In case of online players: <tt>HTTP HEAD</tt> requests can be used to check for soundfont-sidecar-files.</t>
+</blockquote>
 <ol spacing="compact" start="4">
 <li><strong>Implementation Notes:</strong></li>
 </ol>
