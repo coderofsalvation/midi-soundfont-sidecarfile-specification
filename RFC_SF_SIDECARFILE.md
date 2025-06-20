@@ -83,7 +83,7 @@ $ mediaplayer song1.mid
 
 5. **Relation to RMIDI and Other Formats:**
 
-- This specification might serve as an 'override' feature for [RMIDI](https://github.com/spessasus/sf2-rmidi-specification) files, allowing users to play [RMID](https://github.com/spessasus/sf2-rmidi-specification) content with a custom soundfont without re-encoding.
+- This specification might serve as an 'override' feature for [RMIDI](https://github.com/spessasus/sf2-rmidi-specification) files, allowing users to play [RMID](https://github.com/spessasus/sf2-rmidi-specification) content with a custom soundfont without having re-encoding of the RMID file.
 - It is format-agnostic, meaning it can be applied to various MIDI file formats beyond [RMID](https://github.com/spessasus/sf2-rmidi-specification).
 
 **Adoption and Feedback:**
