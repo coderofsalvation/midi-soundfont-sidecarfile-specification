@@ -67,7 +67,7 @@ Table of Contents
 1.  MIDI Soundfont Sidecar specification
 
    *  *Level:* 0
-   *  *Version:* 1.0
+   *  *Version:* 0.5
 
    1.  *Sidecar File Detection:*
 

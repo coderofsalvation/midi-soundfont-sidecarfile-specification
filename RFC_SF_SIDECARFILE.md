@@ -29,7 +29,7 @@ A simple, implicit method for media players to automatically load soundfont file
 # MIDI Soundfont Sidecar specification
 
 * **Level:** 0
-* **Version:** 1.0
+* **Version:** 0.5
 
 1. **Sidecar File Detection:**
 
