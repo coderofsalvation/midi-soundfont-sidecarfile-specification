@@ -22,7 +22,7 @@ fullname="L.R. van Kammen"
 
 .# Abstract
 
-A simple, implicit method for media players, DAWs and music software, to automatically load soundfont files when playing MIDI files, enhancing the playback experience without requiring user configuration.
+A simple, implicit method for media players, DAWs and midisequencers, to automatically load soundfont files when playing MIDI files, enhancing the playback experience without requiring user configuration.
 
 {mainmatter}
 
