@@ -1,0 +1,6 @@
+#!/bin/sh 
+set -e
+mmark RFC_SF_SIDECARFILE.md         > RFC_SF_SIDECARFILE.xml 
+mmark --html RFC_SF_SIDECARFILE.md  > RFC_SF_SIDECARFILE.html 
+xml2rfc --v3 RFC_SF_SIDECARFILE.xml # RFC_SF_SIDECARFILE.txt
+sed 's/<title>.*//g' -i RFC_SF_SIDECARFILE.html 

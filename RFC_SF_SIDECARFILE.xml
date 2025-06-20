@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- name="GENERATOR" content="github.com/mmarkdown/mmark Mmark Markdown Processor - mmark.miek.nl" -->
+<rfc version="3" ipr="trust200902" docName="draft-soundfont-sidecarfiles-leonvankammen-00" submissionType="IETF" category="info" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude" indexInclude="true" consensus="true">
+
+<front>
+<title>soundfont sidecarfiles</title><seriesInfo value="draft-soundfont-sidecarfiles-leonvankammen-00" stream="IETF" status="informational" name="midisoundfontsidecarfiles"></seriesInfo>
+<author initials="L.R." surname="van Kammen" fullname="L.R. van Kammen"><organization></organization><address><postal><street></street>
+</postal></address></author><date/>
+<area>Internet</area>
+<workgroup>Internet</workgroup>
+
+<abstract>
+<t>A simple, implicit method for media players to automatically load soundfont files (.DLS or.SF2) when playing MIDI files, enhancing the playback experience without requiring user configuration.</t>
+</abstract>
+
+</front>
+
+<middle>
+
+<section anchor="midi-soundfont-sidecar-specification"><name>MIDI Soundfont Sidecar specification</name>
+
+<ul spacing="compact">
+<li><strong>Level:</strong> 0</li>
+<li><strong>Version:</strong> 1.0</li>
+</ul>
+
+<ol spacing="compact">
+<li><strong>Sidecar File Detection:</strong></li>
+</ol>
+
+<ul spacing="compact">
+<li><strong>Primary:</strong> Media players SHOULD first look for a <tt>.DLS</tt> sidecar file with the exact same name as the MIDI file (excluding the file extension).</li>
+<li><strong>Fallback:</strong> If a <tt>.DLS</tt> file is not found, media players SHOULD then look for a <tt>.SF2</tt> sidecar file with the same naming convention.</li>
+</ul>
+
+<ol spacing="compact" start="2">
+<li><strong>File Naming Convention:</strong></li>
+</ol>
+
+<ul spacing="compact">
+<li>The sidecar file MUST have the same name as the MIDI file, differing only by the file extension (<tt>.DLS</tt> or <tt>.SF2</tt>).</li>
+<li><t><strong>Example:</strong></t>
+
+<ul spacing="compact">
+<li><tt>mysong.mid</tt> → <tt>mysong.DLS</tt> (primary) or <tt>mysong.SF2</tt> (fallback)</li>
+</ul></li>
+</ul>
+
+<ol spacing="compact" start="3">
+<li><strong>Playback Behavior:</strong></li>
+</ol>
+
+<ul spacing="compact">
+<li>Upon finding a matching sidecar file, the media player SHOULD load the soundfont from this file for the duration of the MIDI file playback.</li>
+<li>If no sidecar file is found, the media player SHOULD fall back to its default soundfont or configured soundfont settings.</li>
+</ul>
+
+<ol spacing="compact" start="4">
+<li><strong>Implementation Notes:</strong></li>
+</ol>
+
+<ul spacing="compact">
+<li>This spec is designed to be lightweight and easy to implement, encouraging broad adoption across various media players and platforms.</li>
+<li>Implementors are encouraged to provide an option for users to override this behavior if desired (e.g., always using a default soundfont, disabling sidecar loading).</li>
+</ul>
+
+<ol spacing="compact" start="5">
+<li><strong>Relation to RMID and Other Formats:</strong></li>
+</ol>
+
+<ul spacing="compact">
+<li>This specification might serve as an 'override' feature for RMID files, allowing users to play RMID content with a custom soundfont without re-encoding.</li>
+<li>It is format-agnostic, meaning it can be applied to various MIDI file formats beyond RMID.</li>
+</ul>
+<t><strong>Adoption and Feedback:</strong></t>
+
+<ul spacing="compact">
+<li>Implementors and interested parties are invited to provide feedback and suggestions for future revisions.</li>
+<li>A list of adopting media players and software will be maintained to track the spec's ecosystem impact.</li>
+</ul>
+<t><strong>Revision History:</strong></t>
+
+<ul spacing="compact">
+<li><strong>v0.5:</strong> Initial release.</li>
+</ul>
+<t><strong>Next Steps:</strong></t>
+
+<ol spacing="compact">
+<li><strong>Review and Feedback:</strong> Circulate this draft among the mentioned projects (VLC-player, fluidsynth, etc.) and relevant communities for feedback.</li>
+<li><strong>Revision (if necessary):</strong> Based on the feedback received, revise the spec to better meet the needs of implementors and users.</li>
+<li><strong>Publication and Promotion:</strong> Publish the finalized spec on a dedicated webpage or within relevant developer resources, and promote it across music tech, developer, and open-source communities.</li>
+</ol>
+
+<ul spacing="compact">
+<li>leonvankammen|isvery.ninja</li>
+</ul>
+</section>
+
+<section anchor="iana-considerations"><name>IANA Considerations</name>
+<t>This document has no IANA actions.</t>
+</section>
+
+<section anchor="acknowledgments"><name>Acknowledgments</name>
+<t>TODO acknowledge.</t>
+</section>
+
+</middle>
+
+</rfc>
