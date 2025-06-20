@@ -38,7 +38,7 @@ A simple, implicit method for media players to automatically load soundfont file
 
 > Fallback order: `.SF2` > `.SF3` > `.SFZ` > `.DLS`
 
-> NOTE: a mediaplayer-engine does not have to support all soundfont-fileformats to be spec-compliant. Just supporting at least one is enough.
+> NOTE: a mediaplayer-engine does not have to support all soundfont-fileformats to be spec-compliant. Supporting the lowest common denominator (`.SF2` in 2025) is enough.
 
 2. **File Naming Convention:**
 

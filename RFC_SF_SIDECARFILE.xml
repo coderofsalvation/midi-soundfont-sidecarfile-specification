@@ -33,7 +33,7 @@
 <li><strong>Fallback:</strong> If a soundfont file is not detected, media players <bcp14>SHOULD</bcp14> then look for other soundfont sidecar files with the same naming convention</li>
 </ul>
 <blockquote><t>Fallback order: <tt>.SF2</tt> &gt; <tt>.SF3</tt> &gt; <tt>.SFZ</tt> &gt; <tt>.DLS</tt></t>
-<t>NOTE: a mediaplayer-engine does not have to support all soundfont-fileformats to be spec-compliant. Just supporting at least one is enough.</t>
+<t>NOTE: a mediaplayer-engine does not have to support all soundfont-fileformats to be spec-compliant. Supporting the lowest common denominator (<tt>.SF2</tt> in 2025) is enough.</t>
 </blockquote>
 <ol spacing="compact" start="2">
 <li><strong>File Naming Convention:</strong></li>
