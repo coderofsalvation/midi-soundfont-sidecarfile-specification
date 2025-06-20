@@ -129,6 +129,8 @@ Internet-Draft           soundfont sidecarfiles                June 2025
       playback.
    *  If no sidecar file is found, the media player SHOULD fall back to
       its default soundfont or configured soundfont settings.
+   *  symlinked (or windows junctioned) soundfonts should be allowed (to
+      preserve space)
 
    4.  *Implementation Notes:*
 
@@ -161,14 +163,14 @@ Internet-Draft           soundfont sidecarfiles                June 2025
 
    *  *v0.5:* Initial release.
 
-   *Next Steps:*
-
 
 
 van Kammen              Expires 22 December 2025                [Page 3]
 
 Internet-Draft           soundfont sidecarfiles                June 2025
 
+
+   *Next Steps:*
 
    1.  *Review and Feedback:* Circulate this draft among the mentioned
        projects (VLC-player, fluidsynth, etc.) and relevant communities
@@ -189,8 +191,6 @@ Internet-Draft           soundfont sidecarfiles                June 2025
 3.  Acknowledgments
 
    TODO acknowledge.
-
-
 
 
 

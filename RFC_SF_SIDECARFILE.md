@@ -72,6 +72,7 @@ $ mediaplayer song1.mid
 
 - Upon finding a matching sidecar file, the media player SHOULD load the soundfont from this file for the duration of the MIDI file playback.
 - If no sidecar file is found, the media player SHOULD fall back to its default soundfont or configured soundfont settings.
+- symlinked (or windows junctioned) soundfonts should be allowed (to preserve space)
 
 4. **Implementation Notes:**
 
