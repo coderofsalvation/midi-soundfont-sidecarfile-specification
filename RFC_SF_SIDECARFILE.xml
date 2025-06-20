@@ -10,7 +10,7 @@
 <workgroup>Internet</workgroup>
 
 <abstract>
-<t>A simple, implicit method for media players to automatically load soundfont files (.DLS or.SF2) when playing MIDI files, enhancing the playback experience without requiring user configuration.</t>
+<t>A simple, implicit method for media players to automatically load soundfont files when playing MIDI files, enhancing the playback experience without requiring user configuration.</t>
 </abstract>
 
 </front>
@@ -29,23 +29,26 @@
 </ol>
 
 <ul spacing="compact">
-<li><strong>Primary:</strong> Media players SHOULD first look for a <tt>.DLS</tt> sidecar file with the exact same name as the MIDI file (excluding the file extension).</li>
-<li><strong>Fallback:</strong> If a <tt>.DLS</tt> file is not found, media players SHOULD then look for a <tt>.SF2</tt> sidecar file with the same naming convention.</li>
+<li><strong>Primary:</strong> Media players SHOULD first look for a soundfont sidecar file (=with the exact same name) as the MIDI file (excluding the file extension).</li>
+<li><strong>Fallback:</strong> If a soundfont file is not detected, media players <bcp14>SHOULD</bcp14> then look for other soundfont sidecar files with the same naming convention</li>
 </ul>
-
+<blockquote><t>Fallback order: <tt>.SF2</tt> &gt; <tt>.SF3</tt> &gt; <tt>.SFZ</tt> &gt; <tt>.DLS</tt></t>
+<t>NOTE: a mediaplayer-engine does not have to support all soundfont-fileformats to be spec-compliant. Just supporting at least one is enough.</t>
+</blockquote>
 <ol spacing="compact" start="2">
 <li><strong>File Naming Convention:</strong></li>
 </ol>
 
 <ul spacing="compact">
-<li>The sidecar file MUST have the same name as the MIDI file, differing only by the file extension (<tt>.DLS</tt> or <tt>.SF2</tt>).</li>
+<li>The sidecar file MUST have the same name as the MIDI file, differing only by the file extension (<tt>.DLS</tt> or <tt>.SF2</tt> e.g.).</li>
 <li><t><strong>Example:</strong></t>
 
 <ul spacing="compact">
-<li><tt>mysong.mid</tt> → <tt>mysong.DLS</tt> (primary) or <tt>mysong.SF2</tt> (fallback)</li>
+<li><tt>mysong.mid</tt> → <tt>mysong.SF2</tt> (primary) or <tt>mysong.SFZ</tt> (fallback e.g.)</li>
 </ul></li>
 </ul>
-
+<blockquote><t>Soundfont file-extensions are <strong>case-insensitive</strong> (valid: <tt>.sf2</tt> or <tt>.SF2</tt> or <tt>.Sf2</tt> e.g.)</t>
+</blockquote>
 <ol spacing="compact" start="3">
 <li><strong>Playback Behavior:</strong></li>
 </ol>
@@ -65,12 +68,12 @@
 </ul>
 
 <ol spacing="compact" start="5">
-<li><strong>Relation to RMID and Other Formats:</strong></li>
+<li><strong>Relation to RMIDI and Other Formats:</strong></li>
 </ol>
 
 <ul spacing="compact">
-<li>This specification might serve as an 'override' feature for RMID files, allowing users to play RMID content with a custom soundfont without re-encoding.</li>
-<li>It is format-agnostic, meaning it can be applied to various MIDI file formats beyond RMID.</li>
+<li>This specification might serve as an 'override' feature for <eref target="https://github.com/spessasus/sf2-rmidi-specification">RMIDI</eref> files, allowing users to play <eref target="https://github.com/spessasus/sf2-rmidi-specification">RMID</eref> content with a custom soundfont without re-encoding.</li>
+<li>It is format-agnostic, meaning it can be applied to various MIDI file formats beyond <eref target="https://github.com/spessasus/sf2-rmidi-specification">RMID</eref>.</li>
 </ul>
 <t><strong>Adoption and Feedback:</strong></t>
 

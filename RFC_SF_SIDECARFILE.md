@@ -22,7 +22,7 @@ fullname="L.R. van Kammen"
 
 .# Abstract
 
-A simple, implicit method for media players to automatically load soundfont files (.DLS or.SF2) when playing MIDI files, enhancing the playback experience without requiring user configuration.
+A simple, implicit method for media players to automatically load soundfont files when playing MIDI files, enhancing the playback experience without requiring user configuration.
 
 {mainmatter}
 
@@ -33,14 +33,20 @@ A simple, implicit method for media players to automatically load soundfont file
 
 1. **Sidecar File Detection:**
 
-- **Primary:** Media players SHOULD first look for a `.DLS` sidecar file with the exact same name as the MIDI file (excluding the file extension).
-- **Fallback:** If a `.DLS` file is not found, media players SHOULD then look for a `.SF2` sidecar file with the same naming convention.
+- **Primary:** Media players SHOULD first look for a soundfont sidecar file (=with the exact same name) as the MIDI file (excluding the file extension).
+- **Fallback:** If a soundfont file is not detected, media players **SHOULD** then look for other soundfont sidecar files with the same naming convention
+
+> Fallback order: `.SF2` > `.SF3` > `.SFZ` > `.DLS`
+
+> NOTE: a mediaplayer-engine does not have to support all soundfont-fileformats to be spec-compliant. Just supporting at least one is enough.
 
 2. **File Naming Convention:**
 
-- The sidecar file MUST have the same name as the MIDI file, differing only by the file extension (`.DLS` or `.SF2`).
+- The sidecar file MUST have the same name as the MIDI file, differing only by the file extension (`.DLS` or `.SF2` e.g.).
 - **Example:**
- - `mysong.mid` → `mysong.DLS` (primary) or `mysong.SF2` (fallback)
+ - `mysong.mid` → `mysong.SF2` (primary) or `mysong.SFZ` (fallback e.g.)
+
+> Soundfont file-extensions are **case-insensitive** (valid: `.sf2` or `.SF2` or `.Sf2` e.g.)
 
 3. **Playback Behavior:**
 
@@ -52,10 +58,10 @@ A simple, implicit method for media players to automatically load soundfont file
 - This spec is designed to be lightweight and easy to implement, encouraging broad adoption across various media players and platforms.
 - Implementors are encouraged to provide an option for users to override this behavior if desired (e.g., always using a default soundfont, disabling sidecar loading).
 
-5. **Relation to RMID and Other Formats:**
+5. **Relation to RMIDI and Other Formats:**
 
-- This specification might serve as an 'override' feature for RMID files, allowing users to play RMID content with a custom soundfont without re-encoding.
-- It is format-agnostic, meaning it can be applied to various MIDI file formats beyond RMID.
+- This specification might serve as an 'override' feature for [RMIDI](https://github.com/spessasus/sf2-rmidi-specification) files, allowing users to play [RMID](https://github.com/spessasus/sf2-rmidi-specification) content with a custom soundfont without re-encoding.
+- It is format-agnostic, meaning it can be applied to various MIDI file formats beyond [RMID](https://github.com/spessasus/sf2-rmidi-specification).
 
 **Adoption and Feedback:**
 
