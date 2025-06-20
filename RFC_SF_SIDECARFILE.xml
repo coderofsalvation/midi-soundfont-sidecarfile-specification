@@ -35,6 +35,26 @@
 <blockquote><t>Fallback order: <tt>.SF2</tt> &gt; <tt>.SF3</tt> &gt; <tt>.SFZ</tt> &gt; <tt>.DLS</tt></t>
 <t>NOTE: a mediaplayer-engine does not have to support all soundfont-fileformats to be spec-compliant. Supporting the lowest common denominator (<tt>.SF2</tt> in 2025) is enough.</t>
 </blockquote>
+<ol spacing="compact" start="3">
+<li><strong>Example</strong></li>
+</ol>
+<t>Here's a fictional music-album, based on midi- and soundfont-files:</t>
+
+<artwork><![CDATA[$ cd album 
+$ ls
+
+drwxr-xr-x   2 leon users  4096 Jun 20 21:39 .
+drwxrwxrwt 295 root root  94208 Jun 20 21:39 ..
+-rw-r--r--   1 leon users   200 Jun 20 21:38 song1.mid
+-rw-r--r--   1 leon user  10000 Jun 20 21:38 song1.sf2
+-rw-r--r--   1 leon users   200 Jun 20 21:38 song2.mid
+lrwxrwxrwx   1 leon users     9 Jun 20 21:39 song2.sf2 -> song1.sf2
+
+$ mediaplayer song1.mid
+]]>
+</artwork>
+<blockquote><t>the mediaplayer will scan for the soundfont in the same directory (<tt>song1.sf2</tt> e.g.), and use that instead of the global configured soundfont.</t>
+</blockquote>
 <ol spacing="compact" start="2">
 <li><strong>File Naming Convention:</strong></li>
 </ol>

@@ -40,6 +40,26 @@ A simple, implicit method for media players to automatically load soundfont file
 
 > NOTE: a mediaplayer-engine does not have to support all soundfont-fileformats to be spec-compliant. Supporting the lowest common denominator (`.SF2` in 2025) is enough.
 
+3. **Example**
+
+Here's a fictional music-album, based on midi- and soundfont-files:
+
+```
+$ cd album 
+$ ls
+
+drwxr-xr-x   2 leon users  4096 Jun 20 21:39 .
+drwxrwxrwt 295 root root  94208 Jun 20 21:39 ..
+-rw-r--r--   1 leon users   200 Jun 20 21:38 song1.mid
+-rw-r--r--   1 leon user  10000 Jun 20 21:38 song1.sf2
+-rw-r--r--   1 leon users   200 Jun 20 21:38 song2.mid
+lrwxrwxrwx   1 leon users     9 Jun 20 21:39 song2.sf2 -> song1.sf2
+
+$ mediaplayer song1.mid
+```
+
+> the mediaplayer will scan for the soundfont in the same directory (`song1.sf2` e.g.), and use that instead of the global configured soundfont. 
+
 2. **File Naming Convention:**
 
 - The sidecar file MUST have the same name as the MIDI file, differing only by the file extension (`.DLS` or `.SF2` e.g.).

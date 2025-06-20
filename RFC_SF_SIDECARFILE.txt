@@ -61,7 +61,7 @@ Internet-Draft           soundfont sidecarfiles                June 2025
 Table of Contents
 
    1.  MIDI Soundfont Sidecar specification  . . . . . . . . . . . .   2
-   2.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   3
+   2.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   4
    3.  Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .   4
 
 1.  MIDI Soundfont Sidecar specification
@@ -84,7 +84,35 @@ Table of Contents
    |  fileformats to be spec-compliant.  Supporting the lowest common
    |  denominator (.SF2 in 2025) is enough.
 
+   3.  *Example*
+
+   Here's a fictional music-album, based on midi- and soundfont-files:
+
+   $ cd album
+   $ ls
+
+   drwxr-xr-x   2 leon users  4096 Jun 20 21:39 .
+   drwxrwxrwt 295 root root  94208 Jun 20 21:39 ..
+   -rw-r--r--   1 leon users   200 Jun 20 21:38 song1.mid
+   -rw-r--r--   1 leon user  10000 Jun 20 21:38 song1.sf2
+   -rw-r--r--   1 leon users   200 Jun 20 21:38 song2.mid
+   lrwxrwxrwx   1 leon users     9 Jun 20 21:39 song2.sf2 -> song1.sf2
+
+   $ mediaplayer song1.mid
+
+   |  the mediaplayer will scan for the soundfont in the same directory
+   |  (song1.sf2 e.g.), and use that instead of the global configured
+   |  soundfont.
+
    2.  *File Naming Convention:*
+
+
+
+
+van Kammen              Expires 22 December 2025                [Page 2]
+
+Internet-Draft           soundfont sidecarfiles                June 2025
+
 
    *  The sidecar file MUST have the same name as the MIDI file,
       differing only by the file extension (.DLS or .SF2 e.g.).
@@ -103,16 +131,6 @@ Table of Contents
       its default soundfont or configured soundfont settings.
 
    4.  *Implementation Notes:*
-
-
-
-
-
-
-van Kammen              Expires 22 December 2025                [Page 2]
-
-Internet-Draft           soundfont sidecarfiles                June 2025
-
 
    *  This spec is designed to be lightweight and easy to implement,
       encouraging broad adoption across various media players and
@@ -145,6 +163,13 @@ Internet-Draft           soundfont sidecarfiles                June 2025
 
    *Next Steps:*
 
+
+
+van Kammen              Expires 22 December 2025                [Page 3]
+
+Internet-Draft           soundfont sidecarfiles                June 2025
+
+
    1.  *Review and Feedback:* Circulate this draft among the mentioned
        projects (VLC-player, fluidsynth, etc.) and relevant communities
        for feedback.
@@ -161,34 +186,9 @@ Internet-Draft           soundfont sidecarfiles                June 2025
 
    This document has no IANA actions.
 
-
-
-
-
-van Kammen              Expires 22 December 2025                [Page 3]
-
-Internet-Draft           soundfont sidecarfiles                June 2025
-
-
 3.  Acknowledgments
 
    TODO acknowledge.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
