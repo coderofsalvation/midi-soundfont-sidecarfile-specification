@@ -3,9 +3,9 @@
 
 
 Internet                                                 L.R. van Kammen
-Internet-Draft                                              20 June 2025
+Internet-Draft                                              23 June 2025
 Intended status: Informational                                          
-Expires: 22 December 2025
+Expires: 25 December 2025
 
 
                          soundfont sidecarfiles
@@ -17,6 +17,8 @@ Abstract
    to automatically load soundfont files when playing MIDI files,
    enhancing the playback experience without requiring user
    configuration.
+
+   <img src="RFC_SF_SIDECARFILE.webp" style="max-width:400px"/>
 
 Status of This Memo
 
@@ -33,7 +35,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 December 2025.
+   This Internet-Draft will expire on 25 December 2025.
 
 Copyright Notice
 
@@ -51,9 +53,7 @@ Copyright Notice
 
 
 
-
-
-van Kammen              Expires 22 December 2025                [Page 1]
+van Kammen              Expires 25 December 2025                [Page 1]
 
 Internet-Draft           soundfont sidecarfiles                June 2025
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-van Kammen              Expires 22 December 2025                [Page 2]
+van Kammen              Expires 25 December 2025                [Page 2]
 
 Internet-Draft           soundfont sidecarfiles                June 2025
 
@@ -165,7 +165,7 @@ Internet-Draft           soundfont sidecarfiles                June 2025
 
 
 
-van Kammen              Expires 22 December 2025                [Page 3]
+van Kammen              Expires 25 December 2025                [Page 3]
 
 Internet-Draft           soundfont sidecarfiles                June 2025
 
@@ -221,4 +221,4 @@ Internet-Draft           soundfont sidecarfiles                June 2025
 
 
 
-van Kammen              Expires 22 December 2025                [Page 4]
+van Kammen              Expires 25 December 2025                [Page 4]

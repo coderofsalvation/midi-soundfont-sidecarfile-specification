@@ -24,6 +24,8 @@ fullname="L.R. van Kammen"
 
 A simple, implicit method for media players, DAWs and midisequencers, to automatically load soundfont files when playing MIDI files, enhancing the playback experience without requiring user configuration.
 
+<img src="RFC_SF_SIDECARFILE.webp" style="max-width:400px"/>
+
 {mainmatter}
 
 # MIDI Soundfont Sidecar specification
