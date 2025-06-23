@@ -10,7 +10,7 @@
 <workgroup>Internet</workgroup>
 
 <abstract>
-<t>A simple, implicit method for media players, DAWs and midisequencers, to automatically load soundfont files when playing MIDI files, enhancing the playback experience without requiring user configuration.</t>
+<t>A simple, implicit method for media players, DAWs and midisequencers, to automatically load soundfont files when playing score files (<tt>.mid</tt> e.g.), enhancing the playback experience without requiring user configuration.</t>
 <t>&lt;img src=&quot;RFC_SF_SIDECARFILE.webp&quot; style=&quot;max-width:400px&quot;/&gt;</t>
 </abstract>
 

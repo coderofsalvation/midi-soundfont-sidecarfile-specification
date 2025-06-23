@@ -22,7 +22,7 @@ fullname="L.R. van Kammen"
 
 .# Abstract
 
-A simple, implicit method for media players, DAWs and midisequencers, to automatically load soundfont files when playing MIDI files, enhancing the playback experience without requiring user configuration.
+A simple, implicit method for media players, DAWs and midisequencers, to automatically load soundfont files when playing score files (`.mid` e.g.), enhancing the playback experience without requiring user configuration.
 
 <img src="RFC_SF_SIDECARFILE.webp" style="max-width:400px"/>
 
